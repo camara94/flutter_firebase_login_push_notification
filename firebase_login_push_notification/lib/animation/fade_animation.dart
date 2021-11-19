@@ -30,3 +30,4 @@ class FadeAnimation extends StatelessWidget {
     );
   }
 }
+///Création des animation flutter
