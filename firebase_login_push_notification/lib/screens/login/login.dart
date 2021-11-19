@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-
 import '../../animation/fade_animation.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:firebase_login_push_notification/bouton/customWidgets.dart';
+import '../../constants/button_social.dart';
+import '../../constants/button_social.dart';
+import '../../constants/button_social.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -157,43 +163,36 @@ class _LoginState extends State<Login> {
                           children: <Widget>[
                             Expanded(
                               child: FadeAnimation(
-                                  1.8,
-                                  Container(
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(50),
-                                        color: Colors.blue),
-                                    child: Center(
-                                      child: Text(
-                                        "Facebook",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                  )),
-                            ),
-                            SizedBox(
-                              width: 30,
+                                1.8,
+                                CustomWidgets.socialButtonRect(
+                                    '', googleColor, FontAwesomeIcons.google,
+                                    onTap: () {
+                                  Fluttertoast.showToast(msg: 'I am google');
+                                }),
+                              ),
                             ),
                             Expanded(
                               child: FadeAnimation(
-                                  1.9,
-                                  Container(
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(50),
-                                        color: Colors.black),
-                                    child: Center(
-                                      child: Text(
-                                        "Github",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                  )),
-                            )
+                                1.8,
+                                CustomWidgets.socialButtonRect(
+                                    '',
+                                    linkedinColor,
+                                    FontAwesomeIcons.linkedin, onTap: () {
+                                  Fluttertoast.showToast(msg: 'I am github');
+                                }),
+                              ),
+                            ),
+                            Expanded(
+                              child: FadeAnimation(
+                                1.8,
+                                CustomWidgets.socialButtonRect(
+                                    '',
+                                    facebookColor,
+                                    FontAwesomeIcons.facebookF, onTap: () {
+                                  Fluttertoast.showToast(msg: 'I am facebook');
+                                }),
+                              ),
+                            ),
                           ],
                         )
                       ],
