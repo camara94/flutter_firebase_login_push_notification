@@ -118,7 +118,7 @@ class _LoginState extends State<Login> {
                         FadeAnimation(
                             1.5,
                             Text(
-                              "Forgot Password?",
+                              "Mot de passe oublié?",
                               style: TextStyle(color: Colors.grey),
                             )),
                         SizedBox(
@@ -134,7 +134,7 @@ class _LoginState extends State<Login> {
                                   color: Colors.orange[900]),
                               child: Center(
                                 child: Text(
-                                  "Login",
+                                  "Se connecter",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold),
@@ -147,7 +147,7 @@ class _LoginState extends State<Login> {
                         FadeAnimation(
                             1.7,
                             Text(
-                              "Continue with social media",
+                              "Continuer avec les réseaux sociaux",
                               style: TextStyle(color: Colors.grey),
                             )),
                         SizedBox(
