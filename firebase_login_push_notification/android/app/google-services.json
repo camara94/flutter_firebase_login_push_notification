@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "568193101195",
+    "project_id": "notification-d11cd",
+    "storage_bucket": "notification-d11cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568193101195:android:6c757538b51a1da0e5538e",
+        "android_client_info": {
+          "package_name": "com.stardevcgroup.firebase_login_push_notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568193101195-ks6jr8e9027aagqi5s23lqu4o2vhlrsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT9i69mgR58DEUskPtBN2aa1BYPXGKK7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568193101195-ks6jr8e9027aagqi5s23lqu4o2vhlrsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
