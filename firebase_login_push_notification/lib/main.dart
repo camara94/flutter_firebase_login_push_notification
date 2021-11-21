@@ -70,9 +70,10 @@ class _MyHomePageState extends State<MyHomePage> {
             NotificationDetails(
                 android: AndroidNotificationDetails(chanel.id, chanel.name,
                     channelDescription: chanel.description,
+                    importance: Importance.high,
                     color: Colors.blue,
                     playSound: true,
-                    icon: '@mipmap/ic_laucher')));
+                    icon: '@mipmap/ic_launcher')));
       }
     });
 
@@ -93,6 +94,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               )
             ]);
+
+        var initializationSettingsAndroid =
+            new AndroidInitializationSettings('ic_laucher');
+
+        print('-------------------------------------++++++');
+        print(initializationSettingsAndroid.defaultIcon);
       }
     });
   }
