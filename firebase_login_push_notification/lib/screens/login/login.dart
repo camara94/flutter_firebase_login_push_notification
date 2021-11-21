@@ -1,11 +1,11 @@
+import 'package:firebase_login_push_notification/services/AuthService.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../animation/fade_animation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:firebase_login_push_notification/bouton/customWidgets.dart';
-import '../../constants/button_social.dart';
-import '../../constants/button_social.dart';
 import '../../constants/button_social.dart';
 
 class Login extends StatefulWidget {
@@ -16,6 +16,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,12 +141,20 @@ class _LoginState extends State<Login> {
                                   borderRadius: BorderRadius.circular(50),
                                   color: Colors.orange[900]),
                               child: Center(
-                                child: Text(
+                                child: MaterialButton(
+                                  child: Text(
+                                    "Se connecter",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: () async {},
+                                ), /*Text(
                                   "Se connecter",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold),
-                                ),
+                                ),*/
                               ),
                             )),
                         SizedBox(
@@ -167,6 +177,10 @@ class _LoginState extends State<Login> {
                                 CustomWidgets.socialButtonRect(
                                     '', googleColor, FontAwesomeIcons.google,
                                     onTap: () {
+                                  Provider.of<AuthService>(context,
+                                          listen: false)
+                                      .googleLogin();
+
                                   Fluttertoast.showToast(msg: 'I am google');
                                 }),
                               ),
